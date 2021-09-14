@@ -18,3 +18,15 @@ const d = 2
 //d = 3 will cause issue
 // const e
 // e = 3  const cannot do like this , but var , let can 
+
+//question 1
+// for (let i = 0; i < 3; i++) {
+//   setTimeout(function () {
+//     console.log(i)
+//   }, 3000)
+// }
+// for (var i = 0; i < 3; i++) {
+//   setTimeout(function () {
+//     console.log(i)
+//   }, 3000)
+// }
