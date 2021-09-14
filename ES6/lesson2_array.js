@@ -38,3 +38,19 @@ for (let i in arr) {
   console.log(i, arr[i])
 }
 //for in support break and continue, but the index is string not number
+
+//before ES6, only array and object can loop
+//for of
+for (let item of arr) {
+  console.log(item)
+}
+
+const price = {
+  A: [1, 2, 3, 4, 5],
+  B: [3, 4, 5],
+  C: [0.5, 0.8, 0.9]
+}
+
+for (let key in price) {
+  console.log(key, price[key])
+}
