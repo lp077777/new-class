@@ -21,13 +21,18 @@
     "lint": "yarn prettier && yarn eslint"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
+    "extends": 
+      "react-app"
+    ,
     "globals": {
       "fixture": true
     }
+  },
+  "prettier":{
+    "semi":false,
+    "useTabs": true,
+    "printWidth": 100,
+    "singleQuote": true
   },
   "browserslist": {
     "production": [
