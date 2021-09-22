@@ -28,3 +28,4 @@ monkey.__proto__.eat = function () {
 dog.eat()
 monkey.eat()
 //the new obj will be large , if you have a lot of functions and props
+
