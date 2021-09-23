@@ -1,6 +1,6 @@
 {
-  let a = 1
-  console.log(a)
+	let a = 1
+	console.log(a)
 }
 //console.log(a)
 var b = 3
@@ -17,7 +17,7 @@ console.log(c)
 const d = 2
 //d = 3 will cause issue
 // const e
-// e = 3  const cannot do like this , but var , let can 
+// e = 3  const cannot do like this , but var , let can
 
 //question 1
 // for (let i = 0; i < 3; i++) {
