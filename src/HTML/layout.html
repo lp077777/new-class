@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout</title>
+</head>
+<body>
+  <!-- element value format form tag, 1: action, url address, like sent the data to where, mething: get/post name -->
+  <!-- label tag, improve user experience -->
+  <form action="backend.js" method="POST" name="name1">
+   <div><label for="user">user: </label><input type="text" name="user" maxlength="3" value="default value" id="user"/></div> 
+   <div>userid: <input type="text" name="user" maxlength="3" placeholder="default id"/></div> 
+   <div>password: <input type="password" name="password" /></div>  
+   <div>gender: <input type="radio" name="gender" value="man" id="man"/><label for="man">man</label>  <input type="radio" name="gender" value="female"/> female</div> 
+   <div>skills: <input type="checkbox" name="skills" value="js" checked/> js <input type="checkbox" name="skills" value="html"/> html <input type="checkbox" name="skills" value="css"/> css</div> 
+  <div><input type="submit" value="submit"/> </div>
+  <div><input type="reset" value="reset"/> </div>
+  <div><input type="button" value="button"/></div>
+  <div><input type="file" /> </div>
+  <div>
+    Country
+    <select>
+      <option selected>CN</option>
+      <option>US</option>
+    </select>
+    </div>
+  <div><textarea rows="5" cols="20"></textarea> </div>
+  </form>
+</body>
+</html>
