@@ -28,13 +28,91 @@ webpage is constitute by elements , these elements are discribed by html tags, r
 
     <!-- 
       1. the coding standards:
-      all the tag should be in <> and should be a pair
+      all the tag should be in <> and should be a pair ,  some may not need , like <br />
+      Containment relationship & Constellation
+
       2. the html frame tag
+      every webpage should have a basic contructure tag, all the details shoulde be in the tag
+      the head tag must have title, and the content should be in body tag
+      <!DOCTYPE> declare tag, tell the browser which version html should be rendered, must be the first line, not a html tag
+      lang is language , en is English , zh-CN is chinese
+      character set Is a collection of multiple characters, UTF-8 is Universal Code, contain almost all the language
+      using different tags can make the page more clear and easy to understand
+      
+      header tage <h1> to <h6>, the h tag will block one line , and from 1 to 6 it will be smaller, all h tag is bold
+      <p></p> can divide the context to different paragragh
+      <br / > means break , force line break br is a single tag 
+      text formatting: <strong> <b>  ;   <em> <i> ; <del><s> ; <ins> <u> prefer to use the first one 
+         <div >  and <span> they are box for display div is division  one div will block one line , but one line can have a lot of spans
+            implement img  using <img src="" /> src is the attri , must set 
       3. the hyper link tag
-      4. picture tag and the difference between  alt and title
+      4. picture tag and the difference between  alt and title,  the biggest one , <html> tag
       5. relative path
      -->
-     <html>   
-        <img src="../ES6/klee.jpg"/> 
+     <!DOCTYPE html>
+     <html lang=en>   
+        <head>
+           <meta charset="UTF-8" /> 
+           <title>html class</title>
+        </head>
+        <body>
+           <h1 id="img1">h1 tag</h1>
+           <h2>h2 tag</h2>
+           <h3>h3 tag</h3>
+           <h4>h4 tag</h4>
+           <h5>h5 tag</h5>
+           <h6>h6 tag</h6>
+            <p>p tag display</p>
+            <strong>strong line</strong>
+            <br />
+            <b>b line</b>
+            <br />
+            <em>em line</em>
+            <br />
+            <i>i line </i>
+            <br />
+            <del> del line </del>
+            <br />
+            <s> s line </s>
+            <br />
+            <ins> ins line </ins>
+            <br />
+            <u> u line</u>
+
+            <br />
+            <div id="containment"> 
+               <div class="Constellation">div1</div>
+               <div class="Constellation">div2</div>
+               <span class="Constellation">div2</span>
+             </div>
+            
+<!-- we need put the source in a same folder , when you open this folder, it's root 
+relative path
+same path src="filename"
+src="folder/filename"
+src="../filename
+"
+Absolute path: normally will not use this 
+start from D: like
+"D:\folder\folder\filename" or
+web url
+https://cdn.mos.cms.futurecdn.net/AUCBR7Yz2RQZNkDEKtfzDP-1024-80.jpg.webp
+-->
+
+<!-- a (anchor) tag hyper link  must have href, target default is _self  _blank will open in a new window-->
+             <img src="https://cdn.mos.cms.futurecdn.net/AUCBR7Yz2RQZNkDEKtfzDP-1024-80.jpg.webp" title="Ayaka" alt="Ayaka" width="304" height="178" /> 
+             <a href="https://www.google.com" target="_blank"> text or img</a>       
+             <a href="index_2.html" target="_blank"> redirect to index_2</a>   
+             <a href="#" target="_blank"> redirect to unknown page</a>  
+             <a href="klee.rar" target="_blank"> download file</a>  
+             <a href="https://www.google.com" target="_blank"> <img src="klee.jpg" width="304" height="178"/></a> 
+             <!-- anchor link , set the name and id -->
+             <a href="#img1"> picture</a>  
+             TEX          T 
+             <!-- multiple space is useless -->
+             TEX&nbsp;&nbsp;&nbsp;&nbsp;T 
+             &lt;p&gt; is a paragragh tag
+         </body>   
      </html>
+     
 
