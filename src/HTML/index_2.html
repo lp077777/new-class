@@ -2,11 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document test</title>
 </head>
 <body>
+  <!--sheet show data display data   table means a box , that' a table , tr line , td(table data) must in tr -->
+  <!-- table header use th -->
+  <!-- normall we won't use the table props, we use css  props: align, border, cellpadding, cellspacing ,width-->
+  <!-- how to combine the cells rowspan colspan , rowspan use the up one, colspan use the left one-->
     <div>Document test</div>
+    <table align="center" border="1" cellpadding="20" cellspacing="0">
+      <thead>      
+        <tr>
+          <th>1:</th>
+          <th>2:</th>
+          <th>3:</th>
+          <th>4:</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>1:test1</td>
+              <td>2:test2</td>
+              <td>3:test3</td>
+              <td>4:test4</td>
+            </tr>
+          <tr>
+              <td>1:data1</td>
+              <td>2:data2</td>
+              <td>3:data3</td>
+              <td>4:data4</td>
+            </tr>
+          <tr>
+              <td>1:data1</td>
+              <td>2:data2</td>
+              <td>3:data3</td>
+              <td>4:data4</td>
+            </tr>
+          <tr>
+              <td rowspan="2">1:data1</td>
+              <td colspan="2">2:data2</td>
+              <td>4:data4</td>
+            </tr>
+          <tr>
+              <td>2:data2</td>
+              <td>3:data3</td>
+              <td>4:data4</td>
+            </tr>
+      </tbody>
+    </table>  
 </body>
 </html> 
