@@ -1,4 +1,21 @@
 
+ <!-- browser working flow
+   1. enter url , browser will using DNS , change the url to real IP address, using IP address to find the server
+   2. using TCP Handshake to connect, now mostly we are using https, there will be an extra step, 
+   using TLS handshake to build an encryption channel, to protect the data won't be changed or monitored
+   3. after built the channel , the browser will rasie a http(s) request  to get data, 
+   with slow start policy , browser will get first 14kb html , then get others
+   4. after get the code , browser will start to render the page:
+     build DOM tree, using main thread, it will run html code line by line , when there is a js  script tag , it will run js, 
+     this time the main thread will stop html render , only when js code running completed , then it will go back to html,
+     with link,img, or script async, script defer, it won't stop DOM render
+     build CSSOM tree
+     combine DOM tree and CSSOM tree
+     layout 
+     display, if have img reflow, it will reredner
+    run script defer async
+ -->
+ 
  <!--
 // what is web : 1. website, webpage_html 
 // webpage constitute the web, and elements constitute the webpage, like picture, text, link, video 
@@ -12,7 +29,8 @@ webpage is constitute by elements , these elements are discribed by html tags, r
     -->
     <!-- chrome browser  the render engine : Blink
     Web standard  W3C 
-    why we need web standard , different browser display is different, so using standard can help different browser to show the same thing 
+    why we need web standard , different browser display is different, 
+    so using standard can help different browser to show the same thing 
     and it's easy to maintain
 
     structure : The structure is used to organize and classify web page elements. At this stage, it is mainly html
@@ -56,12 +74,12 @@ webpage is constitute by elements , these elements are discribed by html tags, r
            <title>html class</title>
         </head>
         <body>
-           <h1 id="img1">h1 tag</h1>
-           <h2>h2 tag</h2>
-           <h3>h3 tag</h3>
-           <h4>h4 tag</h4>
-           <h5>h5 tag</h5>
-           <h6>h6 tag</h6>
+            <h1 id="img1">h1 tag</h1>
+            <h2>h2 tag</h2>
+            <h3>h3 tag</h3>
+            <h4>h4 tag</h4>
+            <h5>h5 tag</h5>
+            <h6>h6 tag</h6>
             <p>p tag display</p>
             <strong>strong line</strong>
             <br />
@@ -78,13 +96,12 @@ webpage is constitute by elements , these elements are discribed by html tags, r
             <ins> ins line </ins>
             <br />
             <u> u line</u>
-
             <br />
             <div id="containment"> 
                <div class="Constellation">div1</div>
                <div class="Constellation">div2</div>
                <span class="Constellation">div2</span>
-             </div>
+            </div>
             
 <!-- we need put the source in a same folder , when you open this folder, it's root 
 relative path
@@ -101,13 +118,20 @@ https://cdn.mos.cms.futurecdn.net/AUCBR7Yz2RQZNkDEKtfzDP-1024-80.jpg.webp
 
 <!-- a (anchor) tag hyper link  must have href, target default is _self  _blank will open in a new window-->
              <img src="https://cdn.mos.cms.futurecdn.net/AUCBR7Yz2RQZNkDEKtfzDP-1024-80.jpg.webp" title="Ayaka" alt="Ayaka" width="304" height="178" /> 
+             <br/>
              <a href="https://www.google.com" target="_blank"> text or img</a>       
-             <a href="index_2.html" target="_blank"> redirect to index_2</a>   
+             <br/>
+             <a href="index_2.html" target="_blank"> redirect to index_2</a>  
+             <br/> 
              <a href="#" target="_blank"> redirect to unknown page</a>  
-             <a href="klee.rar" target="_blank"> download file</a>  
+             <br/>
+             <a href="klee.rar" target="_blank"> download file</a> 
+             <br/> 
              <a href="https://www.google.com" target="_blank"> <img src="klee.jpg" width="304" height="178"/></a> 
+             <br/>
              <!-- anchor link , set the name and id -->
              <a href="#img1"> picture</a>  
+             <br/>
              TEX          T 
              <!-- multiple space is useless -->
              TEX&nbsp;&nbsp;&nbsp;&nbsp;T 
