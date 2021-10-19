@@ -1,72 +1,3 @@
-
- <!-- browser working flow
-   1. enter url , browser will using DNS , change the url to real IP address, using IP address to find the server
-   2. using TCP Handshake to connect, now mostly we are using https, there will be an extra step, 
-   using TLS handshake to build an encryption channel, to protect the data won't be changed or monitored
-   3. after built the channel , the browser will rasie a http(s) request  to get data, 
-   with slow start policy , browser will get first 14kb html , then get others
-   4. after get the code , browser will start to render the page:
-     build DOM tree, using main thread, it will run html code line by line , when there is a js  script tag , it will run js, 
-     this time the main thread will stop html render , only when js code running completed , then it will go back to html,
-     with link,img, or script async, script defer, it won't stop DOM render
-     build CSSOM tree
-     combine DOM tree and CSSOM tree
-     layout 
-     display, if have img reflow, it will reredner
-    run script defer async
- -->
- 
- <!--
-// what is web : 1. website, webpage_html 
-// webpage constitute the web, and elements constitute the webpage, like picture, text, link, video 
-what is HTML : Hyper Text Markup Language , it's a language to discribe the web, it's not a coding language , just a markup language
-it's a markup tag
-
-why it's hyper text markup language, not only text , but also picture, video ...
-it can also redirect to another file 
-
-webpage is constitute by elements , these elements are discribed by html tags, rendered by browser
-    -->
-    <!-- chrome browser  the render engine : Blink
-    Web standard  W3C 
-    why we need web standard , different browser display is different, 
-    so using standard can help different browser to show the same thing 
-    and it's easy to maintain
-
-    structure : The structure is used to organize and classify web page elements. At this stage, it is mainly html
-
-    presentation : is used to set the layout, color, size and other appearance styles of web page elements, CSS
-
-    behavior:Behavior refers to the definition of web page model and the coding of interaction JS
-
-    structure, presentation and behavior should be seperate
-    -->
-
-
-
-    <!-- 
-      1. the coding standards:
-      all the tag should be in <> and should be a pair ,  some may not need , like <br />
-      Containment relationship & Constellation
-
-      2. the html frame tag
-      every webpage should have a basic contructure tag, all the details shoulde be in the tag
-      the head tag must have title, and the content should be in body tag
-      <!DOCTYPE> declare tag, tell the browser which version html should be rendered, must be the first line, not a html tag
-      lang is language , en is English , zh-CN is chinese
-      character set Is a collection of multiple characters, UTF-8 is Universal Code, contain almost all the language
-      using different tags can make the page more clear and easy to understand
-      
-      header tage <h1> to <h6>, the h tag will block one line , and from 1 to 6 it will be smaller, all h tag is bold
-      <p></p> can divide the context to different paragragh
-      <br / > means break , force line break br is a single tag 
-      text formatting: <strong> <b>  ;   <em> <i> ; <del><s> ; <ins> <u> prefer to use the first one 
-         <div >  and <span> they are box for display div is division  one div will block one line , but one line can have a lot of spans
-            implement img  using <img src="" /> src is the attri , must set 
-      3. the hyper link tag
-      4. picture tag and the difference between  alt and title,  the biggest one , <html> tag
-      5. relative path
-     -->
      <!DOCTYPE html>
      <html lang=en>   
         <head>
@@ -102,21 +33,6 @@ webpage is constitute by elements , these elements are discribed by html tags, r
                <div class="Constellation">div2</div>
                <span class="Constellation">div2</span>
             </div>
-            
-<!-- we need put the source in a same folder , when you open this folder, it's root 
-relative path
-same path src="filename"
-src="folder/filename"
-src="../filename
-"
-Absolute path: normally will not use this 
-start from D: like
-"D:\folder\folder\filename" or
-web url
-https://cdn.mos.cms.futurecdn.net/AUCBR7Yz2RQZNkDEKtfzDP-1024-80.jpg.webp
--->
-
-<!-- a (anchor) tag hyper link  must have href, target default is _self  _blank will open in a new window-->
              <img src="https://cdn.mos.cms.futurecdn.net/AUCBR7Yz2RQZNkDEKtfzDP-1024-80.jpg.webp" title="Ayaka" alt="Ayaka" width="304" height="178" /> 
              <br/>
              <a href="https://www.google.com" target="_blank"> text or img</a>       
