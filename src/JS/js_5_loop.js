@@ -76,3 +76,45 @@ for (var i = 0; i < 5; i++) {
 //   result = result + '\n'
 // }
 // console.log(result)
+
+//while
+// var num5 =5
+// while (num5 < 10) { 
+//   console.log(num5)
+//   num5++  // must have this , avoid endless loop
+// }
+
+//do while
+// var num5 = 5
+// do { 
+//   console.log(num5)
+//   num5++
+// } while (num5 < 10)   
+// do while at least run 1 time
+
+//summary : for, while, do while can replace each other
+
+//for  to count the number / number relatec
+// while & do while can do more complex condtion , flexible than for
+// while and do while have a different order, while  condition first operater then, do while operate once then condition
+// do while at least once, while may 0
+
+
+// continue break continue will jump out this loop and jump in next
+// for (var k = 1; k <= 5; k++) { 
+//   if (k === 3) { 
+//     continue
+//   }
+//   console.log('k is ' + k)
+// }
+
+//break  jump out the loop
+// for (var k = 1; k <= 5; k++) { 
+//   if (k === 3) { 
+//     break
+//   }
+//   console.log('k is ' + k)
+// }
+
+
+//naming rules , name a variable should be meanful
