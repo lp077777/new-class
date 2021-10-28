@@ -16,32 +16,33 @@ getSum(0, 2)
 //if formal para less then really argu
 
 //if argu less then formal, it will be undefined
-function getSum1(num1, num2) { 
-  console.log(num1+num2)
-}
-getSum1(0, 2, 10, 11, 12)
-getSum1(1)
+// function getSum1(num1, num2) {
+//   console.log(num2)
+//   console.log(num1+num2)
+// }
+// getSum1(0, 2, 10, 11, 12)
+// getSum1(1)
 
 //return value, sometimes we hope function return the result to who called this function, using return
 
-function getSum2() { 
-  return 'called' // when function run to return, return the result to the caller , () = return result
-}
-console.log(getSum2())
-
-function getMax(num1, num2) {
-  return num1 > num2 ? num1:num2
-}
-console.log(getMax(1, 3))
-
-// var array4 = [11, 22, 33, 44, 55]
-// var max = array4[0] 
-// for (var i = 0; i < array4.length; i++) { 
-//   if (array4[i] > max) { 
-//     max = array4[i]
-//   }
+// function getSum2() { 
+//   return 'called' // when function run to return, return the result to the caller , () = return result
 // }
-// console.log(max)
+// console.log(getSum2())
+
+// function getMax(num1, num2) {
+//   return num1 > num2 ? num1:num2
+// }
+// console.log(getMax(11, 3))
+
+var array4 = [11, 22, 33, 44, 55]
+var max = array4[0] 
+for (var i = 0; i < array4.length; i++) { 
+  if (array4[i] > max) { 
+    max = array4[i]
+  }
+}
+console.log(max)
 function getMaxArray(array) {
   var max = array[0] 
   for (var i = 0; i < array.length; i++) { 
@@ -50,10 +51,11 @@ function getMaxArray(array) {
     }
   }
   return max
-  //alert('123')
+ // return array
+  // alert('123')
   // return max, array
 }
-var result = getMaxArray([11, 22, 33, 44, 55])
+var result = getMaxArray([11, 22, 77, 44, 55])
 console.log(result)
  // return will also end the function and return will only return one value
  //if function have a return , if no return , it will return undefined
@@ -103,11 +105,12 @@ fn(1, 2, 3) //arguments is a pseudo array
 // }
 // function fn2() { 
 //   console.log('fn2')
-//   fn1()
+//   // fn1()
 // }
 // fn1()
 // fn2()
 
 // two ways to function declaration VS function expression
 // function fn () {}
-// var fn3 = function () {}
+// var fn3 = function () { console.log('fn')}
+// console.log(fn3)

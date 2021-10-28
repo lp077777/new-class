@@ -2,9 +2,9 @@
 
 //1. for loop. repeat code , normally about count
 //there is no assignment , so ++i and i++ may not be different
-for (var i = 0; i < 5; i++) { 
-  console.log(i)
-}
+// for (var i = 0; i < 5; i++) { 
+//   console.log(i)
+// }
 //initial variable, condition, operator
 //initial declare a variable, as a counter
 // condition check if keep loop, also the end condition
@@ -41,7 +41,7 @@ for (var i = 0; i < 5; i++) {
 // var classNum = prompt('student numbers')
 // var allScore = 0
 // for (var i = 1; i <= classNum; i++) { 
-//   allScore = allScore + prompt(` the ${i} student's score`) //what's wrong here
+//   allScore = allScore + Number(prompt(` the ${i} student's score`)) //what's wrong here
 // }
 // console.log(allScore/classNum)
 

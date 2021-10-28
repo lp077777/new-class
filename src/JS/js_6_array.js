@@ -1,15 +1,17 @@
 // what is array
 //An array is a collection of data, each one is an element , can put a lot of data in one variable
-var array1 = new Array
+// var array1 = new Array(1,2,3)
+// console.log(array1)
 var array2 = [1, 2, 3, '123', {}, true] //normally using this
+console.log(array2)
 //using index to get element, index from 0
-console.log(array2[3])
-console.log(array2[6])
+// console.log(array2[3])
+// console.log(array2[6])
 
-//how to get the all elements ?  what is traverse
-for (let i = 0; i < array2.length; i++) { 
-  console.log(array2[i])
-}
+// //how to get the all elements ?  what is traverse
+// for (var i = 0; i < array2.length; i++) { 
+//   console.log(array2[i])
+// }
 // length is not index, length is dynamic
 // how to get array 's sum and average ?
 // var array3 = [11, 22, 33, 44, 55]
@@ -22,7 +24,7 @@ for (let i = 0; i < array2.length; i++) {
 // console.log(sum,average)
 
 // how to get eh max value in an array ? 
-// var array4 = [11, 22, 33, 44, 55]
+// var array4 = [11, 22, 77, 44, 55]
 // var max = array4[0] 
 // for (var i = 0; i < array4.length; i++) { 
 //   if (array4[i] > max) { 
@@ -46,6 +48,7 @@ for (let i = 0; i < array2.length; i++) {
 // console.log(array2)
 
 // what if array2="123" ? 
+// console.log(array2="123")
 // how to create an array with 1-100
 // how to filter an array ?
 //how to delete the repeated element ?
@@ -65,3 +68,4 @@ for (var i = 0; i < array.length; i++) {
   }
 }
 console.log(array)
+//[5,4,36,2,1]

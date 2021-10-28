@@ -1,3 +1,4 @@
+console.log('scope2')
 {
 	let a = 1
 	console.log(a)

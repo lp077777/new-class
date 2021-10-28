@@ -1,15 +1,16 @@
 // 作用域： 全局作用域，函数作用域，块状作用域
+console.log('scope')
 console.log(123)
 //when will be global scope, global variable can be access anywhere
 //window.abc
 //abc
-var abc = 1234
-abcd = 12345
+// var abc = 1234
+// abcd = 12345
 // looks same but different, first one is global variable, the second is not , second can be deleted, is the window obj's prop
 // delete abc & delete abcd , same way  delete window.abcd
 
 function test() {
-	ab = 45
+	// ab = 45
 }
 // ab is not global variable,even can be accessed in another js file, it's window obj's prop, global variable must use define
 test()

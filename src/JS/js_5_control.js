@@ -37,7 +37,7 @@
 // }
 
 //ternary expression
-//console.log(1 > 2 ? 'a' : "b")
+// console.log(1 < 2 ? 'a' : "b")
 
 // same 
 // if (1 > 2) {
@@ -51,29 +51,32 @@
 // } else { 
 //   console.log(time)
 // }
-// var result = time > 10 ? '0' + time : time
+// var result = time < 10 ? '0' + time : time
 // alert(result)
 
 
 //switch
-// var score = prompt('enter your score')
-// switch (score) { 
-//   case score >= 90:
-//     console.log('A')
-//     break
-//   case score < 90 && score >= 70 :
-//     console.log('B')
-//     break
-//   default:  console.log('fail')
-// }
+var score = prompt('enter your score')
+switch (score) { 
+  case (score >= 90):
+    console.log('A')
+    break
+  case  (score >= 70) :
+    console.log('B')
+    break
+  default: console.log('fail')
+}
 
-// switch (1) { 
+// switch (3) { 
 //   case 3:
 //     console.log(3)
+//     break
 //   case 2:
 //     console.log(2)
+//     break
 //   case 1:
 //     console.log(1)
+//     break
 //   default:
 //     console.log('default')
 // }

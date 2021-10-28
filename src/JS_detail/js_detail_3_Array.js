@@ -45,3 +45,15 @@ arr3.sort(function (a, b) {
 // get index  indexOf(), if have same elements, return the first one , if cannot find ,return -1
 console.log(arr3.indexOf(11))
 //lastIndexOf() return the index, but find from end
+
+// how to delete the repeated elements
+
+//how to transfer an array to a string
+//toString()  join(delimiter)
+var arr4 = ['aaaa', 'bbbb', 'cccc']
+console.log(arr4.toString())
+console.log(arr4.join('|'))
+
+//concat() combine two arrays, return an new array, the old array won't change
+//slice() 
+//splice()
