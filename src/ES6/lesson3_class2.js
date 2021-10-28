@@ -1,13 +1,14 @@
-// class Animal {
-//   constructor (type) {
-//     this.type = type
+// class Animal{
+//   constructor (type,age) {
+// 		this.type = type
+// 		this.age = age
 //   }
 //   eat() {
 //     console.log('eat food')
 //   }
 // }
 
-// let dog = new Animal('dog')
+// let dog = new Animal('dog',1)
 // let monkey = new Animal('monkey')
 // console.log(dog)
 // console.log(monkey)
@@ -22,6 +23,7 @@
 // getter setter
 //if let _age = 4   then in get just return _age, so if you want to get age and you change the age , it will never work
 let _age = 4
+
 class Animal {
 	constructor(type) {
 		this.type = type
@@ -29,7 +31,7 @@ class Animal {
 	get age() {
 		return _age
 	}
-	set age(value) {
+	set seAge(value) {
 		if (value > 4 && value < 7) {
 			_age = value
 		}
@@ -40,6 +42,5 @@ class Animal {
 }
 let dog = new Animal('dog')
 console.log(dog.age)
-dog.age = 5
-console.log(dog.age)
-//console.log(dog._age) cannot get the value //undefined  althoug setter and getter is function, but when we use it , use the prop
+dog.seAge = 5
+console.log(dog.age)//cannot get the value //undefined  althoug setter and getter is function, but when we use it , use the prop

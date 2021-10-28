@@ -29,7 +29,7 @@ let array = Array.from(
 	{
 		length: 5,
 	},
-	() => 1
+	() => 3
 )
 console.log(array)
 //{0:'a',1:'b',length:2 }
